@@ -12,7 +12,6 @@ import PeopleList from "./components/PeopleList";
 import AddPeople from "./components/AddPeople";
 import _ from "lodash";
 import axios from "axios";
-import VuejsDialog from "vuejs-dialog";
 
 const API_URL = process.env.VUE_APP_API_URL;
 

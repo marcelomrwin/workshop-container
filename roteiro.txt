@@ -3,3 +3,20 @@ Roteiro
 
 docker pull registry.access.redhat.com/rhscl/postgresql-10-rhel7
 docker run --name postgresql_database --rm -d -p 5432:5432 -e POSTGRESQL_USER=people -e POSTGRESQL_PASSWORD=people -e POSTGRESQL_DATABASE=people -e POSTGRESQL_ADMIN_PASSWORD=people -v ~/data/postgres:/var/lib/pgsql/data:Z registry.access.redhat.com/rhscl/postgresql-10-rhel7
+
+
+#Quarkus Panache
+
+
+mvn io.quarkus:quarkus-maven-plugin:0.21.1:create \
+     -DprojectGroupId=br.org.souljava \
+     -DprojectArtifactId=workshop-quarkus-panache \
+     -DclassName="br.org.souljava.PersonService" \
+     -Dpath="/workshop-quarkus-panache" \
+     -Dextensions="quarkus-hibernate-orm-panache,quarkus-jdbc-postgresql,quarkus-resteasy-jsonb"
+
+http://backend-app.apps.redhatrj-1df7.openshiftworkshop.com/api/people
+
+docker build --build-arg VUE_APP_API_URL=http://backend-app.apps.redhatrj-1df7.openshiftworkshop.com/api/people -t marcelodsales/people-view:latest .
+
+docker run -p 8081:80 --rm --name people-view marcelodsales/people-view

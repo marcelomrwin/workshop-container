@@ -5,7 +5,8 @@
 	<parent>
 		<groupId>br.org.souljava</groupId>
 		<artifactId>workshop</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>workshop-quarkus</artifactId>
 	<name>workshop-quarkus</name>
