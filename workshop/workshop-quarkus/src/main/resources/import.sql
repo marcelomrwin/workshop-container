@@ -1,0 +1,4 @@
+insert into people (id, name, surname, age, datein, email, updated) values (nextval('peopleseq'), 'Marcelo', 'Sales', 39, current_timestamp,'marcelo.d.sales@gmail.com',current_timestamp);
+insert into people (id, name, surname, age, datein, email, updated) values (nextval('peopleseq'), 'Sara', 'Sales', 19, current_timestamp,'mail@gmail.com',current_timestamp);
+insert into people (id, name, surname, age, datein, email, updated) values (nextval('peopleseq'), 'Gabriel', 'Sales', 18, current_timestamp,'mail@gmail.com',current_timestamp);
+insert into people (id, name, surname, age, datein, email, updated) values (nextval('peopleseq'), 'Daniel', 'Sales', 12, current_timestamp,'mail@gmail.com',current_timestamp);

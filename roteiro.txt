@@ -1,0 +1,5 @@
+Roteiro
+-------
+
+docker pull registry.access.redhat.com/rhscl/postgresql-10-rhel7
+docker run --name postgresql_database --rm -d -p 5432:5432 -e POSTGRESQL_USER=people -e POSTGRESQL_PASSWORD=people -e POSTGRESQL_DATABASE=people -e POSTGRESQL_ADMIN_PASSWORD=people -v ~/data/postgres:/var/lib/pgsql/data:Z registry.access.redhat.com/rhscl/postgresql-10-rhel7

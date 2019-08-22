@@ -1,0 +1,4 @@
+insert into people (name, surname, age, datein, email, updated) values ('Marcelo', 'Sales', 39, current_timestamp,'marcelo.d.sales@gmail.com',current_timestamp);
+insert into people (name, surname, age, datein, email, updated) values ('Sara', 'Sales', 19, current_timestamp,'mail@gmail.com',current_timestamp);
+insert into people (name, surname, age, datein, email, updated) values ('Gabriel', 'Sales', 18, current_timestamp,'mail@gmail.com',current_timestamp);
+insert into people (name, surname, age, datein, email, updated) values ('Daniel', 'Sales', 12, current_timestamp,'mail@gmail.com',current_timestamp);
