@@ -2,15 +2,15 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>br.org.souljava</groupId>
-		<artifactId>workshop</artifactId>
-		<version>0.0.1</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
+	<groupId>br.org.souljava</groupId>
 	<artifactId>workshop-quarkus</artifactId>
 	<name>workshop-quarkus</name>
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.parameters>true</maven.compiler.parameters>
 		<gson.version>2.8.5</gson.version>
 		<surefire-plugin.version>2.22.0</surefire-plugin.version>
 		<quarkus.version>0.21.1</quarkus.version>
@@ -24,6 +24,12 @@
 				<version>${quarkus.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.8</version>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
