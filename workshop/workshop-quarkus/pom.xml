@@ -4,6 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.org.souljava</groupId>
 	<artifactId>workshop-quarkus</artifactId>
+	<version>0.0.1</version>
 	<name>workshop-quarkus</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
