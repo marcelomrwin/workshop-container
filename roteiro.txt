@@ -7,7 +7,7 @@ docker run --name postgresql_database --rm -d -p 5432:5432 -e POSTGRESQL_USER=pe
 
 #Quarkus
 
-mvn io.quarkus:quarkus-maven-plugin:0.21.1:create \
+mvn io.quarkus:quarkus-maven-plugin:0.28.1:create \
      -DprojectGroupId=br.org.souljava \
      -DprojectArtifactId=workshop-quarkus-panache \
      -DclassName="br.org.souljava.PersonService" \
@@ -24,4 +24,6 @@ http://workshop-spring-boot-ocp-workshop.apps.redhatrj-1df7.openshiftworkshop.co
 
 oc import-image openjdk/openjdk-11-rhel8 --from=registry.redhat.io/openjdk/openjdk-11-rhel8 --confirm -n openshift
 
-oc new-app quay.io/quarkus/ubi-quarkus-native-s2i:19.2.0~https://github.com/marcelomrwin/workshop-container.git --context-dir=workshop/workshop-quarkus --name=workshop-quarkus-native
+oc new-app quay.io/quarkus/ubi-quarkus-native-s2i:19.2.1~https://github.com/marcelomrwin/workshop-container.git --context-dir=workshop/workshop-quarkus --name=workshop-quarkus-native
+
+http://workshop-quarkus-native-ocp-workshop.apps.belem-a207.open.redhat.com/swagger-ui/#/

@@ -24,6 +24,9 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import br.org.souljava.quarkus.model.People;
 
 @Path("/api/people")
@@ -35,14 +38,20 @@ public class PeopleService {
 	@Inject
 	EntityManager em;
 
+	private final Logger log = LoggerFactory.getLogger(PeopleService.class);
+
 	@GET
 	public List<People> get() {
+		log.info("Getting all People");
+		
 		return em.createQuery("select p from People p order by p.id").getResultList();
 	}
 
 	@GET
 	@Path("{id}")
 	public People getSingle(@PathParam("id") Long id) {
+		log.info("Getting a single People");
+		
 		People entity = em.find(People.class, id);
 		if (entity == null) {
 			throw new WebApplicationException("People with id of " + id + " does not exist.", 404);
