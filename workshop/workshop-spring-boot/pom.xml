@@ -1,21 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>br.org.souljava</groupId>
-		<artifactId>workshop</artifactId>
-		<version>0.0.1</version>
-		<relativePath>../pom.xml</relativePath>
-	</parent>
+	<groupId>br.org.souljava</groupId>
 	<artifactId>workshop-spring-boot</artifactId>
 	<name>workshop-spring-boot</name>
+	<version>0.0.1</version>
 
-	<properties>		
+	<properties>
 		<spring-boot.version>2.1.7.RELEASE</spring-boot.version>
 		<arquillian.version>1.4.0.Final</arquillian.version>
 		<awaitility.version>3.1.0</awaitility.version>
 		<rest-assured.version>3.1.0</rest-assured.version>
-	</properties>
+			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+			<maven.compiler.target>1.8</maven.compiler.target>
+			<maven.compiler.source>1.8</maven.compiler.source>
+			<maven.compiler.parameters>true</maven.compiler.parameters>
+		</properties>
 
 	<dependencyManagement>
 		<dependencies>
@@ -26,7 +27,7 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			
+
 			<!-- test -->
 			<dependency>
 				<groupId>org.jboss.arquillian</groupId>
